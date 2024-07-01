@@ -1,0 +1,157 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Mon Dec 11 04:50:55 2023
+| Host         : worker running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_drc -file obj/post_imp_drc.rpt
+| Design       : top_level
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: top_level
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 24
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| DPIP-1   | Warning  | Input pipelining  | 14         |
+| PDRC-153 | Warning  | Gated clock check | 10         |
++----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP cross_mod/address_reading0 input cross_mod/address_reading0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP cross_mod/address_reading__0 input cross_mod/address_reading__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP nolabel_line565/reading_address0 input nolabel_line565/reading_address0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP nolabel_line565/reading_address2 input nolabel_line565/reading_address2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP nolabel_line585/reading_address0 input nolabel_line585/reading_address0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP nolabel_line585/reading_address0 input nolabel_line585/reading_address0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP nolabel_line585/reading_address1 input nolabel_line585/reading_address1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP nolabel_line585/reading_address2 input nolabel_line585/reading_address2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP nolabel_line605/reading_address0 input nolabel_line605/reading_address0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP nolabel_line605/reading_address0 input nolabel_line605/reading_address0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP nolabel_line605/reading_address1 input nolabel_line605/reading_address1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP nolabel_line605/reading_address2 input nolabel_line605/reading_address2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP rotate_m/pixel_addr_out_reg input rotate_m/pixel_addr_out_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP rotate_m/pixel_addr_out_reg input rotate_m/pixel_addr_out_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net BRAM_one_cross_reading_pixel_reg_i_1_n_0 is a gated clock net sourced by a combinational pin BRAM_one_cross_reading_pixel_reg_i_1/O, cell BRAM_one_cross_reading_pixel_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net BRAM_one_downsample_reading_pixel_0_reg_i_1_n_0 is a gated clock net sourced by a combinational pin BRAM_one_downsample_reading_pixel_0_reg_i_1/O, cell BRAM_one_downsample_reading_pixel_0_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net BRAM_one_downsample_reading_pixel_1_reg_i_1_n_0 is a gated clock net sourced by a combinational pin BRAM_one_downsample_reading_pixel_1_reg_i_1/O, cell BRAM_one_downsample_reading_pixel_1_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net BRAM_one_downsample_reading_pixel_2_reg_i_1_n_0 is a gated clock net sourced by a combinational pin BRAM_one_downsample_reading_pixel_2_reg_i_1/O, cell BRAM_one_downsample_reading_pixel_2_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net BRAM_one_horizontal_pixel_data_reg_i_1_n_0 is a gated clock net sourced by a combinational pin BRAM_one_horizontal_pixel_data_reg_i_1/O, cell BRAM_one_horizontal_pixel_data_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net BRAM_one_reading_address_reg[17]_i_2_n_0 is a gated clock net sourced by a combinational pin BRAM_one_reading_address_reg[17]_i_2/O, cell BRAM_one_reading_address_reg[17]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net BRAM_one_reading_enb_reg_i_2_n_0 is a gated clock net sourced by a combinational pin BRAM_one_reading_enb_reg_i_2/O, cell BRAM_one_reading_enb_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net BRAM_one_vertical_pixel_data_reg_i_1_n_0 is a gated clock net sourced by a combinational pin BRAM_one_vertical_pixel_data_reg_i_1/O, cell BRAM_one_vertical_pixel_data_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net buffer_averaging_pixel_reg_i_1_n_0 is a gated clock net sourced by a combinational pin buffer_averaging_pixel_reg_i_1/O, cell buffer_averaging_pixel_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net frame_buffer_reading_enb_reg_i_2_n_0 is a gated clock net sourced by a combinational pin frame_buffer_reading_enb_reg_i_2/O, cell frame_buffer_reading_enb_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+

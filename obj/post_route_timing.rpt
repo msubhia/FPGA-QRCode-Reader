@@ -1,0 +1,104 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Mon Dec 11 04:50:51 2023
+| Host         : worker running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_timing -file obj/post_route_timing.rpt
+| Design       : top_level
+| Device       : 7s50-csga324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.215ns  (required time - arrival time)
+  Source:                 mvg/hcount_out_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pixel_clk_wiz_0  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            tmds_blue/tmds_out_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pixel_clk_wiz_0  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             clk_pixel_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (clk_pixel_clk_wiz_0 rise@13.468ns - clk_pixel_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        11.995ns  (logic 4.051ns (33.771%)  route 7.944ns (66.229%))
+  Logic Levels:           12  (CARRY4=3 LUT2=1 LUT3=1 LUT6=5 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        -0.118ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.581ns = ( 11.887 - 13.468 ) 
+    Source Clock Delay      (SCD):    -0.973ns
+    Clock Pessimism Removal (CPR):    0.490ns
+  Clock Uncertainty:      0.168ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.329ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pixel_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    N15                                               0.000     0.000 r  clk_100mhz (IN)
+                         net (fo=0)                   0.000     0.000    mhdmicw/clk_100mhz
+    N15                  IBUF (Prop_ibuf_I_O)         1.440     1.440 r  mhdmicw/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.673    mhdmicw/clk_ref_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.965    -4.291 r  mhdmicw/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.666    -2.625    mhdmicw/clk_pixel_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.529 r  mhdmicw/clkout1_buf/O
+                         net (fo=5024, routed)        1.556    -0.973    mvg/clk_pixel
+    SLICE_X36Y32         FDRE                                         r  mvg/hcount_out_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y32         FDRE (Prop_fdre_C_Q)         0.419    -0.554 r  mvg/hcount_out_reg[6]/Q
+                         net (fo=33, routed)          0.832     0.279    mvg/hcount_out[3]
+    SLICE_X34Y32         LUT3 (Prop_lut3_I0_O)        0.299     0.578 r  mvg/tally[4]_i_480/O
+                         net (fo=1, routed)           0.000     0.578    mvg/tally[4]_i_480_n_0
+    SLICE_X34Y32         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     1.156 r  mvg/tally_reg[4]_i_242/O[2]
+                         net (fo=1, routed)           0.592     1.748    mvg/tally_reg[4]_i_242_n_5
+    SLICE_X34Y34         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.553     2.301 r  mvg/tally_reg[4]_i_124/O[0]
+                         net (fo=2, routed)           0.458     2.760    mvg/tally_reg[4]_i_124_n_7
+    SLICE_X35Y33         LUT2 (Prop_lut2_I1_O)        0.295     3.055 r  mvg/tally[4]_i_232/O
+                         net (fo=1, routed)           0.000     3.055    mvg/tally[4]_i_232_n_0
+    SLICE_X35Y33         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248     3.303 r  mvg/tally_reg[4]_i_121/O[3]
+                         net (fo=124, routed)         1.826     5.128    nolabel_line636/tally[4]_i_76[3]
+    SLICE_X3Y43          MUXF8 (Prop_muxf8_S_O)       0.455     5.583 r  nolabel_line636/tally_reg[4]_i_331/O
+                         net (fo=1, routed)           0.952     6.535    nolabel_line636/tally_reg[4]_i_331_n_0
+    SLICE_X9Y44          LUT6 (Prop_lut6_I0_O)        0.316     6.851 r  nolabel_line636/tally[4]_i_157/O
+                         net (fo=1, routed)           0.000     6.851    nolabel_line636/tally[4]_i_157_n_0
+    SLICE_X9Y44          MUXF7 (Prop_muxf7_I1_O)      0.217     7.068 r  nolabel_line636/tally_reg[4]_i_75/O
+                         net (fo=1, routed)           0.978     8.046    mvg/tally[4]_i_9_3
+    SLICE_X14Y38         LUT6 (Prop_lut6_I2_O)        0.299     8.345 r  mvg/tally[4]_i_26__0/O
+                         net (fo=1, routed)           0.609     8.954    mvg/tally[4]_i_26__0_n_0
+    SLICE_X15Y33         LUT6 (Prop_lut6_I1_O)        0.124     9.078 f  mvg/tally[4]_i_9/O
+                         net (fo=5, routed)           0.868     9.946    mvg/tally[4]_i_9_n_0
+    SLICE_X28Y31         LUT6 (Prop_lut6_I4_O)        0.124    10.070 r  mvg/tally[4]_i_3__1/O
+                         net (fo=17, routed)          0.829    10.899    mvg/output_register.doutb_reg_reg[0]
+    SLICE_X29Y25         LUT6 (Prop_lut6_I1_O)        0.124    11.023 r  mvg/tmds_out[9]_i_1/O
+                         net (fo=1, routed)           0.000    11.023    tmds_blue/D[3]
+    SLICE_X29Y25         FDRE                                         r  tmds_blue/tmds_out_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pixel_clk_wiz_0 rise edge)
+                                                     13.468    13.468 r  
+    N15                                               0.000    13.468 r  clk_100mhz (IN)
+                         net (fo=0)                   0.000    13.468    mhdmicw/clk_100mhz
+    N15                  IBUF (Prop_ibuf_I_O)         1.370    14.838 r  mhdmicw/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    16.000    mhdmicw/clk_ref_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.221     8.779 r  mhdmicw/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.587    10.366    mhdmicw/clk_pixel_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    10.457 r  mhdmicw/clkout1_buf/O
+                         net (fo=5024, routed)        1.430    11.887    tmds_blue/clk_pixel
+    SLICE_X29Y25         FDRE                                         r  tmds_blue/tmds_out_reg[9]/C
+                         clock pessimism              0.490    12.377    
+                         clock uncertainty           -0.168    12.209    
+    SLICE_X29Y25         FDRE (Setup_fdre_C_D)        0.029    12.238    tmds_blue/tmds_out_reg[9]
+  -------------------------------------------------------------------
+                         required time                         12.238    
+                         arrival time                         -11.023    
+  -------------------------------------------------------------------
+                         slack                                  1.215    
+
+
+
+
